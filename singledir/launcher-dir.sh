@@ -4,7 +4,7 @@
 #This grabs the list of files to work on.  Anything in the folder is considered a valid file to work on.
 filelist=$(ls /source/filesystem/)
 
-#Initialize a few variables. t will store the current file list for the LSF run we are working to generate
+#Initialize a few variables. t will store the current file list for the SLURM run we are working to generate
 t=''
 
 #Counters used to figure out how many files we have looked at for the current file list (i) and how many we have looked at total (j).

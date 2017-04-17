@@ -5,6 +5,6 @@
 
 echo $FOLDER
 
-rsync -av --delete --progress "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
+rsync -av --progress "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
 
 echo $FOLDER

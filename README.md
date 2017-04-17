@@ -12,5 +12,5 @@ A few warnings first:
 
 Contained in this repo are several scripts for this purpose.  Below is a brief description of each tool, more details are in their specific directories.
 
-   * singledir: Have a single directory that has hundreds of thousands of files to move?  This is the script for you.
    * migrate: Have a filesystem that has many seperate folders and directory levels?  This is the script for you.
+   * singledir: Have a single directory that has hundreds of thousands of files to move?  This is the script for you.
