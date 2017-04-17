@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -n 1
+#SBATCH -p general
+#SBATCH --mem=1000
+
+echo $FOLDER
+
+rsync -av --delete --progress "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
+
+echo $FOLDER

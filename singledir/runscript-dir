@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --mem=6000 #Memory per node in MB
+
+#Grabs the list of files we will be working on.
+
+echo $filelist
+
+#Processes each file.
+for f in $filelist
+do
+        rsync -av --progress /source/filesystem/$f /destination/filesystem/
+done
+
