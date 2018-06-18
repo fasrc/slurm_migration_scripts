@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH -n 1
-#SBATCH -p general
-#SBATCH --mem=1000
+#SBATCH -c 8
+#SBATCH -p serial_requeue
+#SBATCH --mem-per-cpu=1000
 
 echo $FOLDER
 
-rsync -av --progress "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
+srun -c 8 fpsync -n 8 -o "-avx --progress --log-file=rsync-${SLURM_JOB_ID}.out" -O "-b" "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
 
 echo $FOLDER
