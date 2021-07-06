@@ -5,6 +5,6 @@
 
 echo $FOLDER
 
-srun -c 8 fpsync -n 8 -o "-avx --progress --log-file=rsync-${SLURM_JOB_ID}.out" -O "-b" "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
+srun -c 8 fpsync -n 8 -o "-aAx" -O "-b" "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
 
 echo $FOLDER
