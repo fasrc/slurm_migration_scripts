@@ -5,6 +5,6 @@
 
 echo $FOLDER
 
-srun -c 8 fpsync -n 8 -o "-aAx" -O "-b" "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
+srun -c 8 fpsync -n 8 -o "-lptgoDAx -v --numeric-ids" -O "-b" "/source/filesystem/${FOLDER}/" "/destination/filesystem/${FOLDER}/"
 
 echo $FOLDER
